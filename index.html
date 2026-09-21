@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juwel Analytics — First-Party Data Architect</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0B0F19',
+                        brandCard: '#111827',
+                        brandBorder: '#1E293B',
+                        brandAccent: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brandDark/80 border-b border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-extrabold tracking-wider text-white">
+                JUWEL<span class="text-brandAccent">ANALYTICS</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="#services" class="hover:text-brandAccent transition-colors">Services</a>
+                <a href="#pipeline" class="hover:text-brandAccent transition-colors">Pipeline</a>
+                <a href="#techstack" class="hover:text-brandAccent transition-colors">Tech Stack</a>
+            </nav>
+            <a href="#audit" class="bg-brandAccent text-brandDark font-bold px-4 py-2 rounded-lg text-sm hover:bg-emerald-400 transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+                Book Audit
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 space-y-20">
+
+        <!-- HERO SECTION -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Left Column -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-brandAccent text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-brandAccent animate-ping"></span>
+                    <span>FIRST-PARTY DATA ARCHITECT</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                    Stop Losing 30%+ Signal Loss To <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Ad Blockers & ITP</span>
+                </h1>
+
+                <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
+                    Standard client-side tracking is blinding your ad campaigns. Engineer resilient zero-cost server-side infrastructures using Cloudflare Workers and Meta CAPI to restore 100% conversion accuracy.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#audit" class="w-full sm:w-auto bg-brandAccent text-brandDark font-bold px-6 py-3.5 rounded-xl text-center hover:bg-emerald-400 transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                        Fix Tracking Architecture →
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-semibold px-6 py-3.5 rounded-xl border border-slate-700 text-center transition-all">
+                        Run Site Check
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Right Column (Profile Photo) -->
+            <div class="lg:col-span-5 flex justify-center relative">
+                <div class="absolute w-64 h-64 sm:w-80 sm:h-80 bg-emerald-500/20 blur-3xl rounded-full -z-10 animate-pulse"></div>
+
+                <div class="relative rounded-2xl p-2.5 bg-brandCard/90 border border-brandBorder shadow-2xl backdrop-blur-xl max-w-sm w-full">
+                    <img 
+                        src="juwel-profile.jpg" 
+                        alt="Juwel Rana - Technical Data Architect" 
+                        class="rounded-xl w-full h-80 sm:h-96 object-cover object-top border border-emerald-500/30 shadow-[0_0_25px_rgba(16,185,129,0.2)]"
+                    />
+
+                    <div class="absolute -bottom-4 left-4 bg-slate-950/90 border border-emerald-500/40 text-brandAccent text-xs px-3.5 py-2 rounded-xl flex items-center gap-2 shadow-xl backdrop-blur-md">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brandAccent animate-pulse"></span>
+                        <span class="font-bold tracking-wide">First-Party Data Architect</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PROOF METRICS BAR -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-brandCard p-6 rounded-2xl border border-brandBorder shadow-lg text-center">
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-black text-brandAccent">30%+</div>
+                <div class="text-xs text-slate-400 font-medium uppercase tracking-wider">Signal Restored</div>
+            </div>
+            <div class="space-y-1 border-l border-brandBorder/60 pl-2">
+                <div class="text-2xl sm:text-3xl font-black text-brandAccent">$0 / Mo</div>
+                <div class="text-xs text-slate-400 font-medium uppercase tracking-wider">Cloudflare Worker</div>
+            </div>
+            <div class="space-y-1 border-l border-brandBorder/60 pl-2">
+                <div class="text-2xl sm:text-3xl font-black text-brandAccent">730 Days</div>
+                <div class="text-xs text-slate-400 font-medium uppercase tracking-wider">1st-Party Cookie</div>
+            </div>
+            <div class="space-y-1 border-l border-brandBorder/60 pl-2">
+                <div class="text-2xl sm:text-3xl font-black text-brandAccent">100% Raw</div>
+                <div class="text-xs text-slate-400 font-medium uppercase tracking-wider">BigQuery SQL Sync</div>
+            </div>
+        </section>
+
+        <!-- CORE SERVICES SECTION -->
+        <section id="services" class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">CORE DATA ARCHITECTURAL SERVICES</h2>
+                <p class="text-slate-400 text-sm">Production-grade tracking frameworks built for maximum attribution accuracy</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-brandCard p-6 rounded-xl border border-brandBorder hover:border-emerald-500/40 transition-all group">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2 group-hover:text-brandAccent transition-colors">
+                        🖥️ Server-Side & Zero-Cost Tracking
+                    </h3>
+                    <ul class="mt-3 space-y-2 text-sm text-slate-400 list-disc list-inside">
+                        <li>Cloudflare Workers sGTM Deployment ($0 hosting)</li>
+                        <li>Meta Conversions API (CAPI) & Google Ads OCT</li>
+                        <li>Safari ITP 1st-party cookie extension via custom DNS</li>
+                    </ul>
+                </div>
+
+                <div class="bg-brandCard p-6 rounded-xl border border-brandBorder hover:border-emerald-500/40 transition-all group">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2 group-hover:text-brandAccent transition-colors">
+                        📊 CRM & Offline Lead Pipelines
+                    </h3>
+                    <ul class="mt-3 space-y-2 text-slate-400 text-sm list-disc list-inside">
+                        <li>HubSpot & GoHighLevel stage sync via Webhooks</li>
+                        <li>Google Sheets + Apps Script automated OCT pipeline</li>
+                        <li>Form & AJAX lead dataLayer custom listeners</li>
+                    </ul>
+                </div>
+
+                <div class="bg-brandCard p-6 rounded-xl border border-brandBorder hover:border-emerald-500/40 transition-all group">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2 group-hover:text-brandAccent transition-colors">
+                        📈 Multi-Platform Attribution
+                    </h3>
+                    <ul class="mt-3 space-y-2 text-slate-400 text-sm list-disc list-inside">
+                        <li>Triple Whale, Northbeam & Hyros tracking setups</li>
+                        <li>Google Consent Mode v2 implementation</li>
+                        <li>Custom Call Tracking Integration (Twilio + Sheets)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-brandCard p-6 rounded-xl border border-brandBorder hover:border-emerald-500/40 transition-all group">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2 group-hover:text-brandAccent transition-colors">
+                        📉 BI & Product Analytics
+                    </h3>
+                    <ul class="mt-3 space-y-2 text-slate-400 text-sm list-disc list-inside">
+                        <li>Raw GA4 data export to BigQuery SQL</li>
+                        <li>E-commerce conversion discrepancy auditing</li>
+                        <li>Custom Looker Studio executive dashboards</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUDIT & CALENDLY BOOKING SECTION -->
+        <section id="audit" class="bg-brandCard p-8 sm:p-12 rounded-2xl border border-brandBorder space-y-6 text-center max-w-4xl mx-auto my-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-brandAccent text-xs font-semibold">
+                <span>⚡ 1-ON-1 TRACKING AUDIT</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white">
+                Ready To Fix Your First-Party Data Pipeline?
+            </h2>
+            
+            <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                Book a direct 15-minute technical audit call to inspect your tracking setup, ad signal loss, and Cloudflare server-side readiness.
+            </p>
+
+            <div class="pt-4">
+                <a href="YOUR_CALENDLY_LINK_HERE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brandAccent text-brandDark font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-400 transition-all shadow-[0_0_25px_rgba(16,185,129,0.4)]">
+                    <span>📅 Schedule Free Audit On Calendly</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-brandBorder py-8 text-center text-xs text-slate-500">
+        © 2026 Juwel Analytics | Engineered by Juwel Rana — Technical Data Architect
+    </footer>
+
+</body>
+</html>
