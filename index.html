@@ -223,7 +223,7 @@
         © 2026 Juwel Analytics | Engineered by Juwel Rana — Technical Data Architect
     </footer>
 
-    <!-- SERVICE-FOCUSED TESTIMONIAL SCRIPT FOR 12 REVIEWS SLIDER -->
+    <!-- SERVICE-FOCUSED TESTIMONIAL SCRIPT WITH AUTOPLAY -->
     <script>
         const reviews = [
             { name: "Sarah Davies", country: "🇺🇸 USA", role: "Agency Director", headline: "Flawless Cloudflare sGTM Setup", text: "Juwel architected our entire server-side tracking infrastructure. His technical precision and zero-cost setup saved our agency thousands." },
@@ -241,6 +241,7 @@
         ];
 
         let currentIndex = 0;
+        let autoSlideInterval;
 
         function getCardsPerView() {
             if (window.innerWidth >= 1024) return 3;
@@ -251,6 +252,8 @@
         function renderReviews() {
             const track = document.getElementById('reviews-track');
             const dotsContainer = document.getElementById('pagination-dots');
+            if (!track || !dotsContainer) return;
+
             track.innerHTML = '';
             dotsContainer.innerHTML = '';
 
@@ -293,6 +296,7 @@
                 dot.onclick = () => {
                     currentIndex = d;
                     renderReviews();
+                    resetAutoSlide();
                 };
                 dotsContainer.appendChild(dot);
             }
@@ -303,6 +307,7 @@
             const maxIndex = Math.max(0, reviews.length - cardsPerView);
             currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
             renderReviews();
+            resetAutoSlide();
         }
 
         function prevSlide() {
@@ -310,10 +315,36 @@
             const maxIndex = Math.max(0, reviews.length - cardsPerView);
             currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
             renderReviews();
+            resetAutoSlide();
+        }
+
+        // Auto-play functionality
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                const cardsPerView = getCardsPerView();
+                const maxIndex = Math.max(0, reviews.length - cardsPerView);
+                currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+                renderReviews();
+            }, 4000); // Change slide every 4 seconds
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Pause autoplay when mouse hovers over the slider container
+        const testimonialSection = document.getElementById('testimonials');
+        if (testimonialSection) {
+            testimonialSection.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+            testimonialSection.addEventListener('mouseleave', () => startAutoSlide());
         }
 
         window.addEventListener('resize', renderReviews);
-        window.addEventListener('DOMContentLoaded', renderReviews);
+        window.addEventListener('DOMContentLoaded', () => {
+            renderReviews();
+            startAutoSlide();
+        });
     </script>
 </body>
 </html>
