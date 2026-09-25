@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies & Results — Juwel Analytics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0B0F19',
+                        brandCard: '#111827',
+                        brandBorder: '#1E293B',
+                        brandAccent: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brandDark/80 border-b border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-extrabold tracking-wider text-white">
+                JUWEL<span class="text-brandAccent">ANALYTICS</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="index.html" class="hover:text-brandAccent transition-colors">Home</a>
+                <a href="about.html" class="hover:text-brandAccent transition-colors">About</a>
+                <a href="services.html" class="hover:text-brandAccent transition-colors">Services</a>
+                <a href="case-study.html" class="text-brandAccent font-semibold transition-colors">Case Study</a>
+                <a href="contact.html" class="hover:text-brandAccent transition-colors">Contact</a>
+            </nav>
+            <a href="contact.html" class="bg-brandAccent text-brandDark font-bold px-4 py-2 rounded-lg text-sm hover:bg-emerald-400 transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+                Book Audit
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 space-y-20">
+
+        <!-- PAGE HEADER -->
+        <section class="text-center space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-brandAccent text-xs font-semibold">
+                <span>MD. JUWEL RANA — PROVEN TRACKING RESULTS</span>
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+                Real-World Attribution & Data Recovery Case Studies
+            </h1>
+            <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed">
+                Discover how I help B2B and E-commerce brands bridge reporting gaps, eliminate subscription overheads, and feed clean conversion data back to ad algorithms.
+            </p>
+        </section>
+
+        <!-- FEATURED CASE STUDY: E-COMMERCE & CLOUDFLARE -->
+        <section class="bg-brandCard p-8 sm:p-10 rounded-2xl border border-brandBorder space-y-8 shadow-xl">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-brandBorder pb-6">
+                <div>
+                    <span class="text-brandAccent text-xs font-bold uppercase tracking-wider">Case Study #01 — E-commerce & Server-Side Tracking</span>
+                    <h2 class="text-2xl font-bold text-white mt-1">Recovering 35%+ Lost Ad Signals via Cloudflare sGTM & Meta CAPI</h2>
+                </div>
+                <div class="bg-emerald-500/10 border border-emerald-500/30 text-brandAccent px-4 py-2 rounded-lg text-xs font-semibold self-start">
+                    Zero Monthly Hosting Fees
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-300 text-sm leading-relaxed">
+                <div class="space-y-4">
+                    <h3 class="text-white font-bold text-base">The Challenge & Problem</h3>
+                    <p>
+                        An expanding e-commerce brand was running heavy ad campaigns on Meta and Google. However, due to Safari ITP restrictions and aggressive ad-blockers, over 35% of checkout events were disappearing on the front end. 
+                    </p>
+                    <p>
+                        Ad platforms were optimizing against incomplete metrics, driving up the Cost Per Acquisition (CPA) while creating severe data mismatches inside GA4.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-white font-bold text-base">The Technical Solution</h3>
+                    <p>
+                        I engineered a custom server-side tracking architecture using Cloudflare Workers (bypassing expensive platform fees like Stape or GCP). 
+                    </p>
+                    <p>
+                        Integrated Meta CAPI and Google Ads OCT with SHA-256 PII data hashing, browser-server event deduplication, and extended cookie lifespans up to 730 days.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-brandBorder text-center">
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-brandBorder">
+                    <div class="text-2xl font-extrabold text-brandAccent">+38%</div>
+                    <div class="text-slate-400 text-xs mt-1">Match Accuracy Restored</div>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-brandBorder">
+                    <div class="text-2xl font-extrabold text-brandAccent">9.2 / 10</div>
+                    <div class="text-slate-400 text-xs mt-1">Event Match Quality Score</div>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-brandBorder">
+                    <div class="text-2xl font-extrabold text-brandAccent">-24%</div>
+                    <div class="text-slate-400 text-xs mt-1">Reduction in Blended CPA</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECOND CASE STUDY: B2B & CRM PIPELINE -->
+        <section class="bg-brandCard p-8 sm:p-10 rounded-2xl border border-brandBorder space-y-8 shadow-xl">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-brandBorder pb-6">
+                <div>
+                    <span class="text-brandAccent text-xs font-bold uppercase tracking-wider">Case Study #02 — B2B & Lead Pipeline</span>
+                    <h2 class="text-2xl font-bold text-white mt-1">Fixing GoHighLevel & Offline Conversion Tracking for SaaS</h2>
+                </div>
+                <div class="bg-emerald-500/10 border border-emerald-500/30 text-brandAccent px-4 py-2 rounded-lg text-xs font-semibold self-start">
+                    Revenue-Driven Attribution
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-300 text-sm leading-relaxed">
+                <div class="space-y-4">
+                    <h3 class="text-white font-bold text-base">The Challenge & Problem</h3>
+                    <p>
+                        A B2B lead generation client using GoHighLevel was losing critical UTM parameters inside iFrames. Furthermore, phone calls and offline sales qualified leads ("Closed Won") were never communicated back to Google Ads or Meta.
+                    </p>
+                    <p>
+                        Ad algorithms had no visibility into actual closed revenue, making it impossible to scale profitable campaigns.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-white font-bold text-base">The Technical Solution</h3>
+                    <p>
+                        Built custom iFrame form scripting to capture `gclid`, `fbclid`, and UTMs reliably. Configured CallRail and Twilio integration to track manual phone calls.
+                    </p>
+                    <p>
+                        Streamlined webhook logic via Zapier/n8n to push offline lifecycle stages directly to ad networks, training algorithms on genuine high-value buyers.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-brandBorder text-center">
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-brandBorder">
+                    <div class="text-2xl font-extrabold text-brandAccent">100%</div>
+                    <div class="text-slate-400 text-xs mt-1">UTM Capture Consistency</div>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-brandBorder">
+                    <div class="text-2xl font-extrabold text-brandAccent">Offline Sync</div>
+                    <div class="text-slate-400 text-xs mt-1">GHL to Meta & Google Ads</div>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-brandBorder">
+                    <div class="text-2xl font-extrabold text-brandAccent">Optimized</div>
+                    <div class="text-slate-400 text-xs mt-1">Bidding on Closed Revenue</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKING PROCESS SECTION -->
+        <section class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl font-bold text-white">How I Approach Every Project</h2>
+                <p class="text-slate-400 text-sm">A clear, step-by-step roadmap to eliminate uncertainty and ensure precision.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-brandCard p-6 rounded-xl border border-brandBorder space-y-3 shadow-lg">
+                    <div class="text-brandAccent font-extrabold text-xl">1. Audit & Discovery</div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        I deeply examine your existing front-end tags, CRM pipelines, and ad managers to locate hidden tracking leaks and reporting discrepancies.
+                    </p>
+                </div>
+                <div class="bg-brandCard p-6 rounded-xl border border-brandBorder space-y-3 shadow-lg">
+                    <div class="text-brandAccent font-extrabold text-xl">2. Custom Engineering</div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        I build clean server containers, Cloudflare proxies, consent compliance rules, and API connections tailored precisely to your tech stack.
+                    </p>
+                </div>
+                <div class="bg-brandCard p-6 rounded-xl border border-brandBorder space-y-3 shadow-lg">
+                    <div class="text-brandAccent font-extrabold text-xl">3. Testing & Results</div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        We perform thorough live event checks and verify match scores, ensuring your ad platforms receive accurate, high-quality conversion signals.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CLIENTS CHOOSE ME -->
+        <section class="bg-brandCard p-8 sm:p-10 rounded-2xl border border-brandBorder space-y-6 shadow-xl">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl font-bold text-white">Why Work With Me?</h2>
+                <p class="text-slate-400 text-sm">Clear advantages for brands looking for reliable, long-term technical partnership.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+                <div class="space-y-2">
+                    <div class="text-brandAccent font-bold text-lg">Zero Monthly Platform Costs</div>
+                    <p class="text-slate-400 text-xs leading-relaxed">Save money by leveraging optimized Cloudflare Worker infrastructure instead of costly recurring third-party hosting packages.</p>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-brandAccent font-bold text-lg">End-to-End Technical Depth</div>
+                    <p class="text-slate-400 text-xs leading-relaxed">From front-end webhooks and CRM workflows to server APIs and BigQuery SQL models, every layer is handled expertly.</p>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-brandAccent font-bold text-lg">Transparent Communication</div>
+                    <p class="text-slate-400 text-xs leading-relaxed">No confusing jargon or inflated promises—just straightforward technical explanations and measurable performance gains.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="text-center bg-gradient-to-b from-brandCard to-slate-900 p-8 sm:p-10 rounded-2xl border border-brandBorder space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Ready to Restore Full Data Accuracy?</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">
+                Let's review your tracking architecture and build a resilient pipeline for your brand today.
+            </p>
+            <div>
+                <a href="contact.html" class="inline-flex items-center gap-2 bg-brandAccent text-brandDark font-bold px-8 py-3.5 rounded-xl text-base hover:bg-emerald-400 transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                    <span>📅 Discuss Your Tracking Setup</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-brandBorder py-8 text-center text-xs text-slate-500">
+        © 2026 Juwel Analytics | Engineered by Juwel Rana — First-Party Data Architect
+    </footer>
+
+</body>
+</html>
