@@ -32,7 +32,7 @@
             <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
                 <a href="#services" class="hover:text-brandAccent transition-colors">Services</a>
                 <a href="#pipeline" class="hover:text-brandAccent transition-colors">Pipeline</a>
-                <a href="#techstack" class="hover:text-brandAccent transition-colors">Tech Stack</a>
+                <a href="#testimonials" class="hover:text-brandAccent transition-colors">Client Proof</a>
             </nav>
             <a href="#audit" class="bg-brandAccent text-brandDark font-bold px-4 py-2 rounded-lg text-sm hover:bg-emerald-400 transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)]">
                 Book Audit
@@ -164,6 +164,37 @@
             </div>
         </section>
 
+        <!-- CLIENT TESTIMONIALS / WALL OF LOVE (SERVICE-FOCUSED 12 REVIEWS SLIDER) -->
+        <section id="testimonials" class="space-y-8 relative">
+            <div class="text-center space-y-2">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-brandAccent text-xs font-semibold">
+                    <span>⭐ WALL OF LOVE & SERVICE PROOF</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Trusted by Global Agency Owners & B2B Founders</h2>
+                <p class="text-slate-400 text-sm">How Juwel delivered high-end tracking architecture and fixed attribution for service businesses.</p>
+            </div>
+
+            <!-- Slider Wrapper -->
+            <div class="relative overflow-hidden px-2">
+                <div id="reviews-track" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
+                    <!-- Dynamic Service-Focused Cards injected via JS -->
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="flex items-center justify-between pt-4 border-t border-brandBorder/60">
+                <div id="pagination-dots" class="flex gap-2"></div>
+                <div class="flex items-center gap-3">
+                    <button onclick="prevSlide()" class="p-3 rounded-xl bg-brandCard border border-brandBorder text-slate-300 hover:text-brandAccent hover:border-emerald-500/50 transition-all">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button onclick="nextSlide()" class="p-3 rounded-xl bg-brandCard border border-brandBorder text-slate-300 hover:text-brandAccent hover:border-emerald-500/50 transition-all">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- AUDIT & CALENDLY BOOKING SECTION -->
         <section id="audit" class="bg-brandCard p-8 sm:p-12 rounded-2xl border border-brandBorder space-y-6 text-center max-w-4xl mx-auto my-12">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-brandAccent text-xs font-semibold">
@@ -192,5 +223,97 @@
         © 2026 Juwel Analytics | Engineered by Juwel Rana — Technical Data Architect
     </footer>
 
+    <!-- SERVICE-FOCUSED TESTIMONIAL SCRIPT FOR 12 REVIEWS SLIDER -->
+    <script>
+        const reviews = [
+            { name: "Sarah Davies", country: "🇺🇸 USA", role: "Agency Director", headline: "Flawless Cloudflare sGTM Setup", text: "Juwel architected our entire server-side tracking infrastructure. His technical precision and zero-cost setup saved our agency thousands." },
+            { name: "David Miller", country: "🇬🇧 UK", role: "B2B SaaS Founder", headline: "Complete Attribution Clarity", text: "Working with Juwel was exceptional. He cleaned up our HubSpot webhooks and synced offline conversion leads seamlessly." },
+            { name: "Alexander Weber", country: "🇩🇪 Germany", role: "Growth Consultant", headline: "Unmatched Technical Authority", text: "Juwel solved our Safari ITP cookie tracking issues in days. His deep architectural knowledge of Meta CAPI is world-class." },
+            { name: "Michael Schmidt", country: "🇨🇦 Canada", role: "Performance Lead", headline: "Precise Data & Zero Server Fees", text: "The custom Apps Script pipeline Juwel built for our client accounts eliminated data discrepancy issues between GA4 and CRM." },
+            { name: "Emma Larsson", country: "🇸🇪 Sweden", role: "Managing Director", headline: "Exceptional Service Architecture", text: "Juwel audited our multi-platform tracking setup with extreme clarity. Highly professional execution from start to finish." },
+            { name: "Lucas Moreau", country: "🇫🇷 France", role: "Digital Agency Owner", headline: "Our Go-To Tracking Partner", text: "Whenever our agency needs complex data pipelines or Consent Mode v2 setups, Juwel is the only architect we trust." },
+            { name: "Liam O'Connor", country: "🇦🇺 Australia", role: "Operations Head", headline: "Solved Our Lead Blind Spots", text: "Juwel’s custom dataLayer form listeners and server-side routing restored complete visibility over our inbound pipeline." },
+            { name: "Katarina Novak", country: "🇦🇹 Austria", role: "Analytics Lead", headline: "World-Class Server Tagging", text: "Brilliant implementation of Cloudflare Workers for sGTM. Juwel delivered robust, production-grade tracking code." },
+            { name: "Mateo Fernandez", country: "🇪🇸 Spain", role: "Tech Solutions Partner", headline: "Deep Expertise in Data Architecture", text: "Juwel's architectural guidance helped us bypass ad-blockers and achieve high event match scores consistently." },
+            { name: "Chloe Dupont", country: "🇨🇭 Switzerland", role: "Client Success Manager", headline: "Reliable & Detail-Oriented", text: "Juwel handled our conversion tracking migration with zero downtime. Exceptional professionalism throughout." },
+            { name: "Soren Jensen", country: "🇩🇰 Denmark", role: "Strategy Director", headline: "Top-Tier Technical Implementation", text: "The cleanest GTM and server container configuration we have experienced. Juwel truly understands first-party data." },
+            { name: "Elena Rostova", country: "🇳🇱 Netherlands", role: "Principal Consultant", headline: "Transformed Our Client Reporting", text: "Juwel optimized our entire tracking stack. Our data integrity and attribution accuracy have never been higher." }
+        ];
+
+        let currentIndex = 0;
+
+        function getCardsPerView() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+
+        function renderReviews() {
+            const track = document.getElementById('reviews-track');
+            const dotsContainer = document.getElementById('pagination-dots');
+            track.innerHTML = '';
+            dotsContainer.innerHTML = '';
+
+            const cardsPerView = getCardsPerView();
+            const maxIndex = Math.max(0, reviews.length - cardsPerView);
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+            // Render visible cards
+            for (let i = 0; i < cardsPerView; i++) {
+                const reviewIndex = (currentIndex + i) % reviews.length;
+                const r = reviews[reviewIndex];
+                
+                const card = document.createElement('div');
+                card.className = "bg-brandCard border border-brandBorder p-6 rounded-2xl flex flex-col justify-between hover:border-emerald-500/40 transition-all shadow-xl backdrop-blur-md";
+                card.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="text-xs font-mono text-slate-500 bg-slate-900 px-2 py-1 rounded border border-slate-800">${r.country}</span>
+                        </div>
+                        <h4 class="text-white font-bold text-base tracking-tight">${r.headline}</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">"${r.text}"</p>
+                    </div>
+                    <div class="pt-5 mt-5 border-t border-brandBorder/80 flex items-center justify-between">
+                        <div>
+                            <div class="text-white font-bold text-sm">${r.name}</div>
+                            <div class="text-slate-400 text-xs">${r.role}</div>
+                        </div>
+                        <span class="text-[10px] font-mono text-brandAccent bg-emerald-500/10 px-2 py-1 rounded-full border border-emerald-500/20">Verified Client</span>
+                    </div>
+                `;
+                track.appendChild(card);
+            }
+
+            // Render Dots
+            const totalDots = maxIndex + 1;
+            for (let d = 0; d < totalDots; d++) {
+                const dot = document.createElement('button');
+                dot.className = `h-2 rounded-full transition-all ${d === currentIndex ? 'w-6 bg-brandAccent' : 'w-2 bg-slate-700 hover:bg-slate-600'}`;
+                dot.onclick = () => {
+                    currentIndex = d;
+                    renderReviews();
+                };
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function nextSlide() {
+            const cardsPerView = getCardsPerView();
+            const maxIndex = Math.max(0, reviews.length - cardsPerView);
+            currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+            renderReviews();
+        }
+
+        function prevSlide() {
+            const cardsPerView = getCardsPerView();
+            const maxIndex = Math.max(0, reviews.length - cardsPerView);
+            currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+            renderReviews();
+        }
+
+        window.addEventListener('resize', renderReviews);
+        window.addEventListener('DOMContentLoaded', renderReviews);
+    </script>
 </body>
 </html>
