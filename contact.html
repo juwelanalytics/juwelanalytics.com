@@ -103,52 +103,68 @@
                 <!-- Web3Forms AJAX Integrated Form -->
                 <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                     
-                    <!-- Web3Forms Access Key -->
+                    <!-- Web3Forms Access Key (আপনার নিজের কি এখানে বসাবেন) -->
                     <input type="hidden" name="access_key" value="7ab234f3-43da-406c-866e-33c9473e9283">
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Full Name</label>
-                            <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors">
+                    <div id="formFieldsContainer" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Full Name</label>
+                                <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Work Email</label>
+                                <input type="email" name="email" required placeholder="john@company.com" class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors">
+                            </div>
                         </div>
-                        <div class="space-y-2">
-                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Work Email</label>
-                            <input type="email" name="email" required placeholder="john@company.com" class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Website / Domain URL</label>
+                                <input type="text" name="website" placeholder="yourdomain.com" class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Primary Service Needed</label>
+                                <select name="service" class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors">
+                                    <option value="Cloudflare sGTM & Meta CAPI">Cloudflare sGTM & Meta CAPI</option>
+                                    <option value="GHL, CRM & Call Tracking Integration">GHL, CRM & Call Tracking Integration</option>
+                                    <option value="Consent Mode v2 & Privacy Compliance">Consent Mode v2 & Privacy Compliance</option>
+                                    <option value="BigQuery SQL & GA4 Analytics Pipelines">BigQuery SQL & GA4 Analytics Pipelines</option>
+                                    <option value="General Tracking Audit">General Tracking Audit</option>
+                                </select>
+                            </div>
                         </div>
+
+                        <!-- TEXTAREA FIELD -->
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Project Details / Message</label>
+                            <textarea name="message" placeholder="Describe your current tracking setup or issues..." class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors h-32 resize-none"></textarea>
+                        </div>
+
+                        <!-- Botcheck Hidden Field for Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <button type="submit" id="submitBtn" class="w-full bg-brandAccent text-brandDark font-bold py-3.5 rounded-xl text-sm hover:bg-emerald-400 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+                            Request Your Technical Audit
+                        </button>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Website / Domain URL</label>
-                            <input type="text" name="website" placeholder="yourdomain.com" class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors">
+                    <!-- Success Message Box (Hidden by default, replaces form on success) -->
+                    <div id="formSuccessBox" class="hidden py-12 px-6 text-center space-y-4">
+                        <div class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 text-brandAccent rounded-full flex items-center justify-center mx-auto text-2xl shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                            ✓
                         </div>
-                        <div class="space-y-2">
-                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Primary Service Needed</label>
-                            <select name="service" class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors">
-                                <option value="Cloudflare sGTM & Meta CAPI">Cloudflare sGTM & Meta CAPI</option>
-                                <option value="GHL, CRM & Call Tracking Integration">GHL, CRM & Call Tracking Integration</option>
-                                <option value="Consent Mode v2 & Privacy Compliance">Consent Mode v2 & Privacy Compliance</option>
-                                <option value="BigQuery SQL & GA4 Analytics Pipelines">BigQuery SQL & GA4 Analytics Pipelines</option>
-                                <option value="General Tracking Audit">General Tracking Audit</option>
-                            </select>
-                        </div>
+                        <h3 class="text-2xl font-bold text-white">Thank You!</h3>
+                        <p class="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
+                            Your audit request has been received successfully. I am reviewing your tech stack details and will get back to you within 24 hours.
+                        </p>
+                        <button type="button" onclick="location.reload();" class="mt-4 inline-block bg-slate-900 border border-brandBorder hover:border-brandAccent text-slate-300 font-semibold px-6 py-2.5 rounded-xl text-xs transition-colors">
+                            Send Another Request
+                        </button>
                     </div>
 
-                    <!-- FIXED TEXTAREA FIELD -->
-                    <div class="space-y-2">
-                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Project Details / Message</label>
-                        <textarea name="message" placeholder="Describe your current tracking setup or issues..." class="w-full bg-slate-900 border border-brandBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandAccent transition-colors h-32 resize-none"></textarea>
-                    </div>
-
-                    <!-- Botcheck Hidden Field for Spam Protection -->
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                    <button type="submit" id="submitBtn" class="w-full bg-brandAccent text-brandDark font-bold py-3.5 rounded-xl text-sm hover:bg-emerald-400 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-                        Request Your Technical Audit
-                    </button>
-
-                    <!-- Status Message Box (Hidden by default) -->
-                    <div id="formResult" class="hidden mt-4 p-4 rounded-xl text-center font-medium text-sm"></div>
+                    <!-- Error Message Box -->
+                    <div id="formErrorBox" class="hidden mt-4 p-4 rounded-xl text-center font-medium text-sm bg-red-500/10 border border-red-500/30 text-red-400"></div>
                 </form>
             </div>
 
@@ -263,10 +279,12 @@
         </div>
     </footer>
 
-    <!-- AJAX SCRIPT FOR SUBMISSION -->
+    <!-- AJAX SCRIPT FOR SUBMISSION & FORM HIDING -->
     <script>
         const form = document.getElementById('contactForm');
-        const result = document.getElementById('formResult');
+        const fieldsContainer = document.getElementById('formFieldsContainer');
+        const successBox = document.getElementById('formSuccessBox');
+        const errorBox = document.getElementById('formErrorBox');
         const submitBtn = document.getElementById('submitBtn');
 
         form.addEventListener('submit', function(e) {
@@ -278,10 +296,7 @@
             // Loading state
             submitBtn.disabled = true;
             submitBtn.innerText = "Sending Request...";
-            result.classList.remove('hidden');
-            result.classList.remove('bg-emerald-500/10', 'text-emerald-400', 'bg-red-500/10', 'text-red-400', 'border-emerald-500/30', 'border-red-500/30');
-            result.classList.add('bg-slate-900', 'border', 'border-brandBorder', 'text-slate-300');
-            result.innerHTML = "Please wait, sending your audit request...";
+            errorBox.classList.add('hidden');
 
             fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
@@ -294,30 +309,23 @@
                 .then(async (response) => {
                     let jsonResponse = await response.json();
                     if (response.status == 200) {
-                        // Success state
-                        result.classList.remove('bg-slate-900', 'text-slate-300', 'border-brandBorder');
-                        result.classList.add('bg-emerald-500/10', 'border', 'border-emerald-500/30', 'text-emerald-400');
-                        result.innerHTML = "🎉 Thank you! Your request has been received successfully. I will get back to you within 24 hours.";
+                        // Success state: Hide input fields and show professional thank you box
+                        fieldsContainer.classList.add('hidden');
+                        successBox.classList.remove('hidden');
                         form.reset();
                     } else {
                         // Error state
-                        result.classList.remove('bg-slate-900', 'text-slate-300', 'border-brandBorder');
-                        result.classList.add('bg-red-500/10', 'border', 'border-red-500/30', 'text-red-400');
-                        result.innerHTML = jsonResponse.message || "Something went wrong! Please try again.";
+                        errorBox.classList.remove('hidden');
+                        errorBox.innerHTML = jsonResponse.message || "Something went wrong! Please try again.";
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = "Request Your Technical Audit";
                     }
                 })
                 .catch(error => {
-                    result.classList.remove('bg-slate-900', 'text-slate-300', 'border-brandBorder');
-                    result.classList.add('bg-red-500/10', 'border', 'border-red-500/30', 'text-red-400');
-                    result.innerHTML = "Network error! Please check your internet connection.";
-                })
-                .then(function() {
+                    errorBox.classList.remove('hidden');
+                    errorBox.innerHTML = "Network error! Please check your internet connection.";
                     submitBtn.disabled = false;
                     submitBtn.innerText = "Request Your Technical Audit";
-                    // Hide message after 8 seconds
-                    setTimeout(() => {
-                        result.classList.add('hidden');
-                    }, 8000);
                 });
         });
     </script>
