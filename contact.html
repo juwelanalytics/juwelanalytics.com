@@ -91,7 +91,7 @@
                 Let's Discuss Your Tracking Architecture
             </h1>
             <p id="pageSubtitle" class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                Send a message for a project inquiry or switch to schedule a direct technical audit call.
+                Book a tracking audit or discuss your server-side setup. No sales pressure—just technical clarity and resilient data solutions.
             </p>
 
             <!-- TOGGLE SWITCH BUTTONS (VIEW SWITCHER) -->
@@ -113,7 +113,7 @@
                 
                 <!-- SECTION 1: MESSAGE FORM -->
                 <div id="messageSection" class="bg-brandCard p-8 sm:p-10 rounded-2xl border border-brandBorder shadow-xl space-y-6">
-                    <h2 class="text-xl font-bold text-white border-b border-brandBorder pb-4">Send a Project Inquiry</h2>
+                    <h2 class="text-xl font-bold text-white border-b border-brandBorder pb-4">Send a Project Inquiry or Audit Request</h2>
                     
                     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                         <input type="hidden" name="access_key" value="7ab234f3-43da-406c-866e-33c9473e9283">
@@ -187,7 +187,7 @@
                         <div class="calendly-inline-widget" data-url="https://calendly.com/juwelanalytics/free-audit" style="min-width:320px;height:650px;"></div>
                     </div>
 
-                    <!-- Calendly Success View (Hidden initially, shown via JS listener) -->
+                    <!-- Calendly Success View -->
                     <div id="calendlySuccessBox" class="hidden py-16 text-center space-y-4">
                         <div class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 text-brandAccent rounded-full flex items-center justify-center mx-auto text-2xl shadow-[0_0_20px_rgba(16,185,129,0.2)]">
                             ✓
@@ -218,18 +218,34 @@
                     </div>
 
                     <div>
-                        <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">LinkedIn</div>
+                        <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Professional Network</div>
                         <a href="https://www.linkedin.com/in/juwelanalytics/" target="_blank" class="text-brandAccent font-medium hover:underline mt-1 block text-sm">Connect on LinkedIn</a>
                     </div>
 
                     <div>
-                        <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">WhatsApp</div>
+                        <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Instant Chat</div>
                         <a href="https://wa.link/h16xqx" target="_blank" class="text-brandAccent font-medium hover:underline mt-1 block text-sm inline-flex items-center gap-1">Chat on WhatsApp ↗</a>
                     </div>
 
                     <div>
                         <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Location</div>
                         <p class="text-slate-300 mt-1 text-sm">Remote / Rajshahi, Bangladesh</p>
+                    </div>
+                </div>
+
+                <!-- WHAT HAPPENS NEXT CARD -->
+                <div class="bg-brandCard p-6 sm:p-8 rounded-2xl border border-brandBorder shadow-xl space-y-4">
+                    <h3 class="text-lg font-bold text-white border-b border-brandBorder pb-3">What Happens Next?</h3>
+                    <div class="space-y-3 text-sm text-slate-300">
+                        <div>
+                            <span class="text-brandAccent font-bold">1. Review:</span> I review your tech stack and form details within 24 hours.
+                        </div>
+                        <div>
+                            <span class="text-brandAccent font-bold">2. Discussion:</span> A quick chat to pinpoint your exact data loss and attribution gaps.
+                        </div>
+                        <div>
+                            <span class="text-brandAccent font-bold">3. Action Plan:</span> Receive a clear technical audit and implementation roadmap.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -239,13 +255,38 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-brandCard border-t border-brandBorder py-8 px-4 text-center text-xs text-slate-400 mt-20">
-        &copy; 2026 Juwel Rana. First-Party Data Architect. All rights reserved.
+    <footer class="bg-brandCard border-t border-brandBorder py-8 px-4 mt-20">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="space-y-1">
+                <a href="index.html" class="text-lg font-extrabold tracking-wider text-white">
+                    JUWEL<span class="text-brandAccent">ANALYTICS</span>
+                </a>
+                <p class="text-xs text-slate-400">&copy; 2026 Juwel Rana. First-Party Data Architect. All rights reserved.</p>
+            </div>
+            
+            <!-- SOCIAL LINKS -->
+            <div class="flex items-center space-x-3">
+                <a href="mailto:digitrackerbd@gmail.com" class="w-10 h-10 bg-slate-900 border border-brandBorder rounded-xl flex items-center justify-center text-slate-300 hover:text-brandAccent hover:border-brandAccent transition-colors">
+                    ✉
+                </a>
+                <a href="https://www.linkedin.com/in/juwelanalytics/" target="_blank" class="w-10 h-10 bg-slate-900 border border-brandBorder rounded-xl flex items-center justify-center text-slate-300 hover:text-brandAccent hover:border-brandAccent transition-colors">
+                    in
+                </a>
+                <a href="https://twitter.com" target="_blank" class="w-10 h-10 bg-slate-900 border border-brandBorder rounded-xl flex items-center justify-center text-slate-300 hover:text-brandAccent hover:border-brandAccent transition-colors">
+                    𝕏
+                </a>
+                <a href="https://facebook.com" target="_blank" class="w-10 h-10 bg-slate-900 border border-brandBorder rounded-xl flex items-center justify-center text-slate-300 hover:text-brandAccent hover:border-brandAccent transition-colors">
+                    f
+                </a>
+                <a href="https://wa.link/h16xqx" target="_blank" class="w-10 h-10 bg-slate-900 border border-brandBorder rounded-xl flex items-center justify-center text-slate-300 hover:text-brandAccent hover:border-brandAccent transition-colors">
+                    💬
+                </a>
+            </div>
+        </div>
     </footer>
 
     <!-- TOGGLE & CALENDLY LISTENER SCRIPT -->
     <script>
-        // Switch View Function (Message vs Booking)
         function switchView(viewType) {
             const messageSection = document.getElementById('messageSection');
             const bookingSection = document.getElementById('bookingSection');
@@ -271,11 +312,10 @@
                 showBookBtn.className = "px-5 py-2.5 rounded-xl font-bold text-xs transition-all bg-slate-900 border border-brandBorder text-slate-300 hover:border-brandAccent";
                 
                 pageTitle.innerText = "Let's Discuss Your Tracking Architecture";
-                pageSubtitle.innerText = "Send a message for a project inquiry or switch to schedule a direct technical audit call.";
+                pageSubtitle.innerText = "Book a tracking audit or discuss your server-side setup. No sales pressure—just technical clarity and resilient data solutions.";
             }
         }
 
-        // Check URL Parameters on Page Load (e.g., contact.html?booking=true)
         window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('booking') === 'true') {
@@ -283,10 +323,8 @@
             }
         });
 
-        // Listen to Calendly Event Completion (Success without redirect)
         window.addEventListener('message', function(e) {
             if (e.data.event && e.data.event === 'calendly.event_scheduled') {
-                // Hide the calendly widget and show custom success message inside the page
                 document.getElementById('calendlyWrapper').classList.add('hidden');
                 document.getElementById('calendlySuccessBox').classList.remove('hidden');
             }
